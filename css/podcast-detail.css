@@ -374,7 +374,7 @@
 
 .action-btn {
   flex: 1;
-  padding: 14px 12px;
+  padding: 12px 10px;
   border: none;
   border-radius: 10px;
   font-size: 14px;
@@ -386,7 +386,7 @@
   justify-content: center;
   gap: 6px;
   white-space: nowrap;
-  min-height: 48px;
+  min-height: 40px;
   position: relative;
   overflow: hidden;
 }
@@ -407,16 +407,27 @@
 }
 
 .action-btn.follow-btn {
-  border: 1px solid #ffecec;
-  background-color: #fff2f2;
-  color: #ff4d4f;
+  border: none;
+  background-color: #ff4d4f;
+  color: #fff;
   font-weight: 500;
 }
 
 .action-btn.follow-btn:hover {
+  background-color: #ff7875;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 77, 79, 0.3);
+}
+
+.action-btn.follow-btn.active {
+  border: 1px solid #ffecec;
+  background-color: #fff2f2;
+  color: #ff4d4f;
+}
+
+.action-btn.follow-btn.active:hover {
   border-color: #ff4d4f;
   background-color: #fff1f0;
-  transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(255, 77, 79, 0.2);
 }
 
@@ -444,6 +455,43 @@
   background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
   box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
   transform: translateY(-2px);
+}
+
+.action-btn.register-btn {
+  flex: 1;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  font-weight: 600;
+}
+
+.action-btn.register-btn:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+  transform: translateY(-2px);
+}
+
+#before-register {
+  width: 100%;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+#before-register .action-btn.follow-btn {
+  flex: 1.2;
+  min-width: 90px;
+}
+
+#before-register .action-btn.register-btn {
+  flex: 2.8;
+}
+
+#after-register {
+  width: 100%;
+  display: flex;
+  gap: 12px;
+  align-items: center;
 }
 
 /* 为内容区添加足够的底部边距，避免被悬浮按钮遮挡 */
@@ -529,10 +577,10 @@
   }
   
   .action-btn {
-    padding: 12px 8px;
+    padding: 10px 6px;
     font-size: 12px;
     gap: 4px;
-    min-height: 44px;
+    min-height: 36px;
   }
   
   .action-btn svg {
@@ -661,10 +709,10 @@
   }
   
   .action-btn {
-    padding: 10px 6px;
+    padding: 8px 4px;
     font-size: 11px;
     gap: 3px;
-    min-height: 40px;
+    min-height: 32px;
   }
   
   .action-btn svg {

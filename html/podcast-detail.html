@@ -103,15 +103,30 @@
       </main>
       
       <!-- 底部悬浮操作按钮 -->
-      <div class="floating-action-buttons">
-        <button class="action-btn follow-btn">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#ff4d4f" stroke="#ff4d4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-          </svg>
-          已关注
-        </button>
-        <button class="action-btn process-btn" onclick="window.location.href='process.html'">查看创作流程</button>
-        <button class="action-btn submission-btn" onclick="showMyWorksModal()">查看我的投稿</button>
+      <div class="floating-action-buttons" id="action-buttons">
+        <!-- 初始状态：关注按钮和报名按钮 -->
+        <div id="before-register">
+          <button class="action-btn follow-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+            关注
+          </button>
+          <button class="action-btn register-btn" id="register-btn" onclick="handleRegister()">立即报名</button>
+        </div>
+        
+        <!-- 报名后状态：三个按钮 -->
+        <div id="after-register" style="display: none;">
+          <button class="action-btn follow-btn active">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ff4d4f" stroke="#ff4d4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            已关注
+          </button>
+          <button class="action-btn process-btn" onclick="window.location.href='process.html'">查看创作流程</button>
+          <button class="action-btn submission-btn" onclick="showMyWorksModal()">查看我的投稿</button>
+        </div>
       </div>
       
       <!-- 我的作品弹窗 -->
@@ -165,6 +180,15 @@
         hideMyWorksModal();
       }
     });
+    
+    // 处理报名逻辑
+    function handleRegister() {
+      // 隐藏初始状态的按钮
+      document.getElementById('before-register').style.display = 'none';
+      // 显示报名后状态的按钮
+      document.getElementById('after-register').style.display = 'flex';
+      // 可以在这里添加其他报名逻辑，比如发送API请求等
+    }
   </script>
 </body>
 </html>

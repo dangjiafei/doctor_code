@@ -36,12 +36,31 @@
           <div class="invitation-content">
             <p class="invitation-greeting">活动详情</p>
             <p class="invitation-text">
-              尊敬的老师，您好！在这知识爆炸的时代，医学领域的每一次突破都牵动着无数人的心。我深知您作为医学领域的佼佼者，不仅在临床实践中救治了无数患者，更在学术研究中不断探索着医学的边界。因此，我特地带着一份特别的邀请，希望与您携手共创医学知识的新篇章。在此，我们诚挚地邀请您参与这次活动，与我们一同见证医学知识的力量。
+              尊敬的老师，您好！在这知识爆炸的时代，医学领域的每一次突破都牵动着无数人的心。我深知您作为医学领域的佼佼者，不仅在临床实践中救治了无数患者，更在学术研究中不断探索着医学的边界。
             </p>
           </div>
         </div>
         
-        <!-- 征稿内容主题 -->
+        <!-- 征稿内容要求 -->
+        <div class="podcast-card">
+          <h3 class="invitation-greeting">征稿主题要求</h3>
+          <p class="invitation-text">
+            本次活动，我们精心策划了两个前沿医学主题，期待您能根据自己的兴趣与研究专长，选择其中一个进行深入探讨
+          </p>
+          <div class="requirement-item">
+            <span class="requirement-label">主题①：</span>
+            <span class="requirement-desc">围手术期渗血防治管理</span>
+          </div>
+          <div class="requirement-item">
+            <span class="requirement-label">主题②：</span>
+            <span class="requirement-desc">围手术期渗血防治管理</span>
+          </div>
+          <p class="invitation-text">
+            您可以根据自己的兴趣和研究专长，任选其一进行深入探讨。
+          </p>
+        </div>
+        
+        <!-- 内容要求 -->
         <div class="podcast-card">
           <h3 class="invitation-greeting">内容要求</h3>
           <div class="requirement-item">
@@ -91,7 +110,7 @@
           </svg>
           已关注
         </button>
-        <button class="action-btn process-btn">查看创作流程</button>
+        <button class="action-btn process-btn" onclick="window.location.href='process.html'">查看创作流程</button>
         <button class="action-btn submission-btn">查看我的投稿</button>
       </div>
     </div>
@@ -102,7 +121,7 @@
   <script>
     // 页面加载完成后初始化组件，传递页面标题
     document.addEventListener('DOMContentLoaded', function() {
-      initPageComponents({ title: '播客邀约' });
+      initPageComponents({ title: '征集活动邀约' });
     });
   </script>
 </body>

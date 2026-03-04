@@ -136,13 +136,13 @@
   font-weight: 500;
   color: #666;
   transition: all 0.3s ease;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: none;
 }
 
 .filter-btn.active {
   background-color: #1890ff;
   color: #fff;
-  box-shadow: 0 2px 6px rgba(24, 144, 255, 0.3);
+  box-shadow: none;
 }
 
 .filter-btn:active:not(.active) {
@@ -161,7 +161,7 @@
   background-color: #fff;
   border-radius: 16px;
   padding: 14px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: none;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -171,13 +171,13 @@
 
 .activity-item:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  box-shadow: none;
   cursor: pointer;
 }
 
 .activity-item:active {
   transform: translateY(1px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
 }
 
 /* 活动类型标识 - 封面上 */
@@ -191,7 +191,7 @@
   font-weight: 500;
   white-space: nowrap;
   z-index: 2;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
 }
 
 .activity-type-badge.podcast {
@@ -221,7 +221,7 @@
   aspect-ratio: 16/9;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: none;
   background-color: #f5f5f5;
 }
 
@@ -838,14 +838,14 @@
   background-color: #fff;
   border-radius: 12px;
   padding: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  box-shadow: none;
   transition: all 0.3s ease;
   gap: 12px;
 }
 
 .live-item:active {
   transform: translateY(1px);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  box-shadow: none;
 }
 
 .live-item-left {
@@ -1038,29 +1038,6 @@
     padding: 3px 10px;
   }
 }
-    height: 80px;
-  }
-  
-  .live-channel {
-    font-size: 12px;
-  }
-  
-  .live-title {
-    font-size: 14px;
-  }
-  
-  .live-speaker {
-    font-size: 12px;
-  }
-  
-  .discover-title {
-    font-size: 16px;
-  }
-  
-  .discover-tab-btn {
-    font-size: 14px;
-  }
-}
 
 /* 调研列表样式 */
 .survey-list {
@@ -1074,7 +1051,7 @@
   background-color: #fff;
   border-radius: 16px;
   padding: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: none;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -1093,13 +1070,13 @@
 
 .survey-item:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  box-shadow: none;
   cursor: pointer;
 }
 
 .survey-item:active {
   transform: translateY(1px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
 }
 
 /* 左侧图标区域 */
@@ -1118,7 +1095,7 @@
   height: 100%;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: none;
   background-color: #f5f5f5;
 }
 
@@ -1144,7 +1121,7 @@
   font-size: 8px;
   font-weight: 600;
   white-space: nowrap;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: none;
   z-index: 2;
 }
 
@@ -1289,7 +1266,7 @@
 .survey-item.completed:hover,
 .survey-item.expired:hover {
   transform: none;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: none;
 }
 
 .survey-item.completed:hover .survey-reward,
@@ -1465,7 +1442,7 @@
   background-color: #fff;
   border-radius: 16px;
   padding: 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  box-shadow: none;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -1477,13 +1454,13 @@
 
 .recommend-item:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
   border-color: #e6f7ff;
 }
 
 .recommend-item:active {
   transform: translateY(0);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  box-shadow: none;
 }
 
 /* 推荐封面 */
@@ -1519,7 +1496,7 @@
   font-weight: 600;
   white-space: nowrap;
   z-index: 2;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
 }
 
 .recommend-type-badge.online {
@@ -1619,7 +1596,7 @@
   background-color: #fff;
   border-radius: 16px;
   padding: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: none;
   margin-bottom: 0;
 }
 

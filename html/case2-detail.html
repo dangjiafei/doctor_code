@@ -360,16 +360,18 @@
     /* 评论输入框样式 */
     .comment-input {
       width: 100%;
-      min-height: 60px;
-      padding: 10px;
-      border: 1px solid #e8e8e8;
+      min-height: 30px;
+      height: 30px;
+      padding: 5px 10px;
+      border: none;
       border-radius: 6px;
       font-size: 12px;
       line-height: 1.4;
       color: #333;
-      resize: vertical;
+      resize: none;
       box-sizing: border-box;
       font-family: inherit;
+      background-color: #fafafa;
     }
     
     /* 评论输入框聚焦样式 */
@@ -587,8 +589,15 @@
       border-radius: 10px;
       font-size: 10px;
       font-weight: 500;
-      background-color: #ff4d4f;
       color: #fff;
+    }
+    
+    .status-badge.completed {
+      background-color: #52c41a;
+    }
+    
+    .status-badge.pending {
+      background-color: #ff4d4f;
     }
     
     .interaction-buttons {
@@ -1072,7 +1081,7 @@
               <div class="video-interaction">
                 <div class="video-stats">
                   <div class="stat-item">
-                    <span class="status-badge">未完成</span>
+                    <span class="status-badge completed">已完成</span>
                     <span style="margin-left: 8px;">截止日期：2026-01-30</span>
                   </div>
                   
@@ -1100,6 +1109,7 @@
           <!-- 标签页导航 -->
           <div class="tabs-nav">
             <button class="tab-btn active" data-tab="intro">互动病例</button>
+            <button class="tab-btn" data-tab="comments">评论(2)</button>
           </div>
           
           <!-- 标签页内容容器 -->
@@ -1474,18 +1484,13 @@
           </div>
           
           <!-- 评论输入框 - 单独区域 -->
-          <div class="comment-input-container" style="margin-top: 50px;">
-            <textarea class="comment-input" placeholder="写下您的评论..."></textarea>
+          <div class="comment-input-container" style="margin-top: 130px;">
+            <textarea class="comment-input" placeholder="分享您的专业见解..."></textarea>
           </div>
         </div>
       </main>
       
-      <!-- 底部操作栏 - 悬浮在手机屏幕底部 -->
-      <div class="submit-section">
-        <div class="bottom-actions">
-          <button class="submit-button" onclick="submitCase()">提交</button>
-        </div>
-      </div>
+
     </div>
   </div>
   

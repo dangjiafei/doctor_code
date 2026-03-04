@@ -111,7 +111,32 @@
           已关注
         </button>
         <button class="action-btn process-btn" onclick="window.location.href='process.html'">查看创作流程</button>
-        <button class="action-btn submission-btn">查看我的投稿</button>
+        <button class="action-btn submission-btn" onclick="showMyWorksModal()">查看我的投稿</button>
+      </div>
+      
+      <!-- 我的作品弹窗 -->
+      <div id="my-works-modal" class="modal-overlay">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3>我的作品</h3>
+            <button class="close-btn" onclick="hideMyWorksModal()">×</button>
+          </div>
+          <div class="works-list">
+        <div class="work-item">
+          <div class="work-left">
+            <div class="work-cover">
+              <img src="../img/zj.png" alt="播客活动" class="work-image">
+              <div class="work-status-badge approved">审核通过</div>
+            </div>
+          </div>
+          <div class="work-right">
+            <h3 class="work-title">2026年最新心血管疾病诊疗进展...</h3>
+            <p class="work-description">投稿时间：2026-01-01 12:00</p>
+            <p class="work-description">详细讲解心血管疾病的最新诊疗技术和药物应用，适合心内科医生和心血管医生学习...</p>
+          </div>
+        </div>
+      </div>
+        </div>
       </div>
     </div>
   </div>
@@ -122,6 +147,23 @@
     // 页面加载完成后初始化组件，传递页面标题
     document.addEventListener('DOMContentLoaded', function() {
       initPageComponents({ title: '征集活动邀约' });
+    });
+    
+    // 显示我的作品弹窗
+    function showMyWorksModal() {
+      document.getElementById('my-works-modal').style.display = 'flex';
+    }
+    
+    // 隐藏我的作品弹窗
+    function hideMyWorksModal() {
+      document.getElementById('my-works-modal').style.display = 'none';
+    }
+    
+    // 点击弹窗外部关闭
+    document.getElementById('my-works-modal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        hideMyWorksModal();
+      }
     });
   </script>
 </body>
